@@ -1,15 +1,13 @@
 "use client";
 
-import Landing from "./Home/Landing/page";
+import Landing from "./Home/page";
 
-
-
- // 👈 adjust path if your component lives elsewhere
+// 👈 adjust path if your component lives elsewhere
 
 export default function Home() {
   return (
     <div>
-      <Landing/>
+      <Landing />
     </div>
   );
 }

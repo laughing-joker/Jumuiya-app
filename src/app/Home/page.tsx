@@ -24,18 +24,18 @@ export default function Landing() {
 
         <div className="relative container mx-auto px-4 py-20 text-center">
           <div className="animate-fade-in">
-            <Cross className="w-16 h-16 mx-auto mb-6 text-yellow-600 animate-spiritual-glow" />
+            <Cross className="w-16 h-16 mx-auto mb-6 text-primary animate-spiritual-glow" />
             <h1 className="text-5xl md:text-6xl font-playfair font-bold mb-4 text-foreground">
               Jumuiya ya Mt.Theresia wa Calcutta
             </h1>
-            <p className="text-xl md:text-2xl text-gray-500 mb-3">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-3">
               Mtakatifu Theresia wa Calcutta
             </p>
-            <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-8 italic">
-              "Uwe mwaminifu katika mambo madogo maana ndani yake ndipo nguvu
-              zako zipo."
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 italic">
+              &quot;Uwe mwaminifu katika mambo madogo maana ndani yake ndipo
+              nguvu zako zipo.&quot;
             </p>
-            <p className="text-sm text-gray-500 mb-12">
+            <p className="text-sm text-muted-foreground mb-12">
               Mama Teresa of Calcutta
             </p>
 
@@ -44,7 +44,7 @@ export default function Landing() {
               <Button
                 size="lg"
                 variant="outline"
-                onClick={() => router.push("/auth")}
+                onClick={() => router.push("/Auth")}
                 className="text-lg px-8"
               >
                 Sign In
@@ -62,7 +62,7 @@ export default function Landing() {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           <div className="bg-card rounded-xl p-8 shadow-lg border border-border text-center hover:shadow-xl transition-shadow">
-            <Users className="w-12 h-12 mx-auto mb-4 text-yellow-600" />
+            <Users className="w-12 h-12 mx-auto mb-4 text-primary" />
             <h3 className="text-xl font-semibold mb-3">Unity in Prayer</h3>
             <p className="text-muted-foreground">
               Join our Saturday prayer gatherings and strengthen your faith with
@@ -71,7 +71,7 @@ export default function Landing() {
           </div>
 
           <div className="bg-card rounded-xl p-8 shadow-lg border border-border text-center hover:shadow-xl transition-shadow">
-            <Heart className="w-12 h-12 mx-auto mb-4 text-yellow-600" />
+            <Heart className="w-12 h-12 mx-auto mb-4 text-primary" />
             <h3 className="text-xl font-semibold mb-3">Apostolic Groups</h3>
             <p className="text-muted-foreground">
               Participate in Viwawa, Wawata, Uwata, and Wazee wa Kanisa groups
@@ -79,7 +79,7 @@ export default function Landing() {
           </div>
 
           <div className="bg-card rounded-xl p-8 shadow-lg border border-border text-center hover:shadow-xl transition-shadow">
-            <BookOpen className="w-12 h-12 mx-auto mb-4 text-yellow-600" />
+            <BookOpen className="w-12 h-12 mx-auto mb-4 text-primary" />
             <h3 className="text-xl font-semibold mb-3">Spiritual Growth</h3>
             <p className="text-muted-foreground">
               Access reflections, scripture, and guidance for your faith journey
@@ -93,7 +93,7 @@ export default function Landing() {
         <div className="container mx-auto px-4 py-8 text-center">
           <Cross className="w-8 h-8 mx-auto mb-4 text-primary" />
           <p className="text-sm italic text-muted-foreground">
-            "Do small things with great love" — Mother Teresa
+            &quot;Fanya mambo madogo kwa upendo mkuu&quot; — Mama Teresa
           </p>
         </div>
       </footer>

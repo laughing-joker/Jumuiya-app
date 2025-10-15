@@ -44,79 +44,172 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  /* Catholic gold and white theme */
+  --background: oklch(1 0 0); /* white */
+  --foreground: oklch(0.145 0 0); /* dark text */
+
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
+
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+
+  /* Divine gold primary */
+  --primary: oklch(0.65 0.31 101); /* approx 43 74% 49% in HSL */
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
+
+  /* Light beige secondary */
+  --secondary: oklch(0.95 0.04 104);
+  --secondary-foreground: oklch(0.145 0 0);
+
+  /* Muted */
+  --muted: oklch(0.92 0.03 100);
+  --muted-foreground: oklch(0.3 0.05 50);
+
+  /* Soft purple accent */
+  --accent: oklch(0.7 0.1 275);
+  --accent-foreground: oklch(0.27 0.05 275);
+
+  /* Destructive */
+  --destructive: oklch(0.6 0.24 27);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  /* Borders and inputs */
+  --border: oklch(0.92 0.04 100);
+  --input: oklch(0.92 0.04 100);
+  --ring: oklch(0.65 0.31 101);
+
+  --radius: 0.75rem;
+
+  /* Custom spiritual design tokens */
+  --gold-light: oklch(0.7 0.35 100);
+  --gold-dark: oklch(0.55 0.25 100);
+  --beige-light: oklch(0.96 0.03 105);
+  --spiritual-purple: oklch(0.75 0.15 275);
+
+  /* Shadows with golden glow */
+  --shadow-gold: 0 10px 40px -10px oklch(0.65 0.31 101 / 0.3);
+  --shadow-soft: 0 4px 20px -2px oklch(0.145 0 0 / 0.08);
+
+  /* Gradients */
+  --gradient-gold: linear-gradient(
+    135deg,
+    oklch(0.65 0.31 101),
+    oklch(0.7 0.35 100)
+  );
+  --gradient-spiritual: linear-gradient(
+    180deg,
+    oklch(1 0 0),
+    oklch(0.96 0.03 105)
+  );
+
+  /* Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Sidebar */
+  --sidebar-background: oklch(0.98 0 0);
+  --sidebar-foreground: oklch(0.145 0 240);
+  --sidebar-primary: oklch(0.1 0 240);
   --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar-accent: oklch(0.959 0 240);
+  --sidebar-accent-foreground: oklch(0.1 0 240);
+  --sidebar-border: oklch(0.91 0 220);
+  --sidebar-ring: oklch(0.598 0.91 217.2);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
+  /* Dark mode with warm tones */
+  --background: oklch(0.145 0 0); /* dark background */
+  --foreground: oklch(0.95 0 0); /* light text */
+
+  --card: oklch(0.12 0 0); /* slightly lighter than background */
+  --card-foreground: oklch(0.95 0 0);
+
+  --popover: oklch(0.12 0 0);
+  --popover-foreground: oklch(0.95 0 0);
+
+  --primary: oklch(0.65 0.31 101); /* gold primary */
+  --primary-foreground: oklch(0.985 0 0);
+
+  --secondary: oklch(0.18 0 30); /* deep muted secondary */
+  --secondary-foreground: oklch(0.95 0 0);
+
+  --muted: oklch(0.18 0 30);
+  --muted-foreground: oklch(0.6 0 0); /* gray-ish text */
+
+  --accent: oklch(0.25 0.05 270); /* soft purple accent */
+  --accent-foreground: oklch(0.88 0 270);
+
+  --destructive: oklch(0.4 0.15 0);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  --border: oklch(0.2 0 30);
+  --input: oklch(0.2 0 30);
+  --ring: oklch(0.65 0.31 101);
+
+  --sidebar-background: oklch(0.145 0 0);
+  --sidebar-foreground: oklch(0.95 0 0);
+  --sidebar-primary: oklch(0.65 0.31 101);
   --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --sidebar-accent: oklch(0.18 0 30);
+  --sidebar-accent-foreground: oklch(0.95 0 0);
+  --sidebar-border: oklch(0.2 0 30);
+  --sidebar-ring: oklch(0.65 0.31 101);
 }
 
 @layer base {
+  /* Apply border box globally */
   * {
-    @apply border-border outline-ring/50;
+    box-sizing: border-box; /* replace @apply border-border */
+    margin: 0;
+    padding: 0;
   }
+
+  /* Body styles */
   body {
-    @apply bg-background text-foreground;
+    background-color: hsl(var(--background)); /* replace bg-background */
+    color: hsl(var(--foreground)); /* replace text-foreground */
+    font-family: "Inter", sans-serif;
+  }
+
+  /* Headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display", serif;
+  }
+}
+@layer components {
+  /* Catholic cross watermark */
+  .cross-watermark {
+    position: absolute; /* replaces @apply absolute */
+    pointer-events: none; /* replaces @apply pointer-events-none */
+    opacity: 0.05; /* direct CSS for low opacity */
+    font-size: 20rem;
+    color: hsl(var(--primary)); /* using your CSS variable */
+  }
+
+  /* Spiritual glow effect */
+  .spiritual-glow {
+    box-shadow: var(--shadow-gold);
+  }
+
+  /* Gold gradient button variant */
+  .btn-gold {
+    background: var(--gradient-gold);
+    color: white; /* replaces @apply text-white */
+    font-weight: 600; /* replaces @apply font-semibold */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05); /* optional shadow-lg replacement */
+    border-radius: 0.375rem; /* replaces rounded-md */
+    transition: var(--transition-smooth);
+  }
+
+  .btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-gold);
   }
 }
