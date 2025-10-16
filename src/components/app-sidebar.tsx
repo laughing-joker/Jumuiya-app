@@ -3,16 +3,13 @@
 import * as React from "react";
 import Image from "next/image";
 import {
-  IconChartBar,
-  IconDashboard,
-  IconFolder,
-  IconListDetails,
-  IconUsers,
+  IconBell,
+  IconHome,
+  IconSettings,
+  IconUserCircle,
+  IconBox,
 } from "@tabler/icons-react";
-
-import { NavDocuments } from "@/components/nav-documents";
 import { NavMain } from "@/components/nav-main";
-import { NavSecondary } from "@/components/nav-secondary";
 import { NavUser } from "@/components/nav-user";
 import {
   Sidebar,
@@ -36,11 +33,11 @@ const data = {
     avatar: "/avatars/shadcn.jpg",
   },
   navMain: [
-    { title: "Dashboard", url: "#", icon: IconDashboard },
-    { title: "Lifecycle", url: "#", icon: IconListDetails },
-    { title: "Analytics", url: "#", icon: IconChartBar },
-    { title: "Projects", url: "#", icon: IconFolder },
-    { title: "Team", url: "#", icon: IconUsers },
+    { title: "Home", url: "/src/app/Dashboard", icon: IconHome },
+    { title: "Account", url: "#", icon: IconUserCircle },
+    { title: "Announcement", url: "#", icon: IconBell },
+    { title: "Contribution", url: "#", icon: IconBox },
+    { title: "Settings", url: "#", icon: IconSettings },
   ],
 };
 
