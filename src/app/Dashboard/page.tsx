@@ -1,24 +1,10 @@
-import { Cross } from "lucide-react";
-import { Button } from "@/components/ui/button";
+"use client";
+import Header from "../../components/Header";
 
 const Dashboard = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-beige-light to-background">
-      <header className="bg-card border-b border-border shadow-sm">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <Cross className="w-8 h-8 text-primary" />
-            <div>
-              <h1 className="text-xl font-playfair font-bold text-foreground">
-                Jumuiya ya Wakatoliki
-              </h1>
-              <p className="text-xs text-muted-foreground">Mtakatifu Yosefu</p>
-            </div>
-          </div>
-          <Button variant="outline">Sign Out</Button>
-        </div>
-      </header>
-
+      <Header />
       <main className="container mx-auto px-4 py-8">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-playfair font-bold mb-6 animate-fade-in">
