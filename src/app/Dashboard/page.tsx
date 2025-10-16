@@ -1,42 +1,40 @@
-"use client";
-import Header from "../../components/Header";
+import { AppSidebar } from "@/components/app-sidebar"
+import { ChartAreaInteractive } from "@/components/chart-area-interactive"
+import { DataTable } from "@/components/data-table"
+import { SectionCards } from "@/components/section-cards"
+import { SiteHeader } from "@/components/site-header"
+import {
+  SidebarInset,
+  SidebarProvider,
+} from "@/components/ui/sidebar"
 
-const Dashboard = () => {
+import data from "./data.json"
+
+export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-beige-light to-background">
-      <Header />
-      <main className="container mx-auto px-4 py-8">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-playfair font-bold mb-6 animate-fade-in">
-            Welcome to Your Dashboard
-          </h2>
-
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 animate-fade-in">
-            <div className="bg-card rounded-xl p-6 shadow-md border border-border hover:shadow-lg transition-shadow">
-              <h3 className="text-lg font-semibold mb-2">Prayer Intentions</h3>
-              <p className="text-sm text-muted-foreground">
-                Submit and view community prayer requests
-              </p>
-            </div>
-
-            <div className="bg-card rounded-xl p-6 shadow-md border border-border hover:shadow-lg transition-shadow">
-              <h3 className="text-lg font-semibold mb-2">Announcements</h3>
-              <p className="text-sm text-muted-foreground">
-                Stay updated with community news
-              </p>
-            </div>
-
-            <div className="bg-card rounded-xl p-6 shadow-md border border-border hover:shadow-lg transition-shadow">
-              <h3 className="text-lg font-semibold mb-2">Saturday Prayers</h3>
-              <p className="text-sm text-muted-foreground">
-                View upcoming prayer schedules
-              </p>
+    <SidebarProvider
+      style={
+        {
+          "--sidebar-width": "calc(var(--spacing) * 72)",
+          "--header-height": "calc(var(--spacing) * 12)",
+        } as React.CSSProperties
+      }
+    >
+      <AppSidebar variant="inset" />
+      <SidebarInset>
+        <SiteHeader />
+        <div className="flex flex-1 flex-col">
+          <div className="@container/main flex flex-1 flex-col gap-2">
+            <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
+              <SectionCards />
+              <div className="px-4 lg:px-6">
+                <ChartAreaInteractive />
+              </div>
+              <DataTable data={data} />
             </div>
           </div>
         </div>
-      </main>
-    </div>
-  );
-};
-
-export default Dashboard;
+      </SidebarInset>
+    </SidebarProvider>
+  )
+}
